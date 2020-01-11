@@ -62,11 +62,11 @@ $(document).ready(function(){
     });
 
     $(".slider-section .owl-carousel").owlCarousel({
-        loop: false,
+        loop: true,
         margin:0,
-        autoplay: true,
-        autoplayTimeout: 3000,
+        autoplay: false,
         nav: true,
+        navText: ['<i class="fas fa-angle-left fa-3x nav-btn"></i>','<i class="fas fa-angle-right fa-3x nav-btn"></i>'],
         dots: false,
         autoplayHoverPause:true,
         items: 1,

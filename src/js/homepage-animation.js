@@ -52,7 +52,7 @@ $(document).ready(function(){
 
 	// 
 	animations[5].from('.achivement-section .section-heading .head', 1.2, {alpha: 0, y: "30px", ease: Power2.easeOut})
-	animations[5].from('.achivement-section .owl-carousel', 1, {scaleX: 0, ease: Bounce.easeOut})
+	animations[5].from('.achivement-section .owl-carousel', 1.5, {alpha: 0, ease: Power2.easeOut})
 
 	function animHandler(targets, observer) {
 		for (let entry of targets) {
