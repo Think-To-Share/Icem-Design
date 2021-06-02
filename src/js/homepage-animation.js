@@ -25,7 +25,7 @@ $(document).ready(function(){
 	  count++;
 	}
 
-	let animationDone = [0, 0, 0, 0, 0, 0];
+	let animationDone = [0, 0, 0, 0, 0, 0, 0];
 
 	// Slider Section
 	animations[0].fromTo('.slider-section .slide .slider-heading-1', {x: "-100%"}, {duration: 1.2, x: 0, ease: Bounce.easeOut});
@@ -47,12 +47,18 @@ $(document).ready(function(){
 	animations[3].staggerFrom('.quality-product-section .section-content ul li', 1, {scale: 0, ease: 'elastic.out(1, 0.3)'})
 
 	//
-	animations[4].from('.client-carousel-section .section-heading .head', 1.2, {alpha: 0, y: "30px", ease: Power2.easeOut})
-	animations[4].from('.client-carousel-section .owl-carousel', 1, {scaleX: 0, ease: Bounce.easeOut})
+	if($(window).width > 768) {
+		animations[4].from('.building-guide-section .section-heading .head', 1.2, {alpha: 0, y: "30px", ease: Power2.easeOut})
+		animations[4].from('.building-guide-section .guide', 1, {alpha: 0, ease: Power2.easeOut})
+	}
+
+	//
+	animations[5].from('.client-carousel-section .section-heading .head', 1.2, {alpha: 0, y: "30px", ease: Power2.easeOut})
+	animations[5].from('.client-carousel-section .owl-carousel', 1, {scaleX: 0, ease: Bounce.easeOut})
 
 	// 
-	animations[5].from('.achivement-section .section-heading .head', 1.2, {alpha: 0, y: "30px", ease: Power2.easeOut})
-	animations[5].from('.achivement-section .owl-carousel', 1.5, {alpha: 0, ease: Power2.easeOut})
+	animations[6].from('.achivement-section .section-heading .head', 1.2, {alpha: 0, y: "30px", ease: Power2.easeOut})
+	animations[6].from('.achivement-section .owl-carousel', 1.5, {alpha: 0, ease: Power2.easeOut})
 
 	function animHandler(targets, observer) {
 		for (let entry of targets) {
